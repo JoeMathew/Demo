@@ -78,7 +78,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         NSString *urlString = @"http://nmflightservice.cloudapp.net/api/Flight";
-        NSString        *const paramString    = [NSString stringWithFormat:@"/?DepartureAirportCode=%@&ArrivalAirportCode=%@&DepartureDate=%@&ReturnDate=%@",_sourceTextField.text, _destnTextField.text, startDate, retDate ];
+        NSString        *const paramString    = [NSString stringWithFormat:@"?DepartureAirportCode=%@&ArrivalAirportCode=%@&DepartureDate=%@&ReturnDate=%@",_sourceTextField.text, _destnTextField.text, startDate, retDate ];
         NSString *reqUrlWithParam = [urlString stringByAppendingString:paramString];
         NSLog(@"Request URL = %@", reqUrlWithParam);
         
